@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="./normalize.css">
+    <link rel="stylesheet" type="text/css" href="./index.css">
+    <link rel="stylesheet" type="text/css" href="./rank.css">
+    <script type="text/javascript" src="./html5shiv.js"></script>
+</head>
+
+<body>
+    <div class="container">
+    <div class="head">
+        <header class="top_header"></header>
+        <nav>
+            <ul class="nav">
+                <li><a href="#">大赛首页</a>
+                    <hr class="vertical">
+                </li>
+                <li><a href="#">大赛介绍</a>
+                    <hr class="vertical">
+                </li>
+                <li><a href="rank.html">赛况排行</a>
+                    <hr class="vertical">
+                </li>
+                <li><a href="#">赛事报道</a>
+                    <hr class="vertical">
+                </li>
+                <li><a href="#">个人信息</a>
+                    <hr class="vertical">
+                </li>
+                <li><a href="#">参赛软件介绍</a>
+                    <hr class="vertical">
+                </li>
+                <li><a href="#">关于中一</a></li>
+            </ul>
+        </nav>
+        </div>
+        <div class="division">
+        </div>
+        <article>
+           
+            <section class="rate_sec">
+            <div class="rate_sec_title">当前位置:赛况排行</div>
+                <div class="rate_sec_div">
+                    <div style="width:892px;margin: 0 auto;">
+
+                        <div class="rate_sec_div_02">
+                            <img src="img/rank_topic.gif">
+                        </div>
+                        <div class="rate_sec_div_03">
+                            <label>查看我当前的名次: <input type="text" id="query_txt"></input></label>
+                            <button type="button" id="query_btn">query</button>
+                        </div>
+                        <div class="rate_sec_div_01"><label>按<select id="sort">
+                            <option value="zhdf">综合得分</option>
+                            <option value="jzdf">净值得分</option>
+                            <option value="hcldf">回撤率得分</option>
+                            <option value="jlrdf">净利润得分</option>
+                        </select>排序</label><span style="color: grey;">2013-5-12</span></div>
+                    </div>
+                    <div class="table-border">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>排名</td>
+                                    <td>当日权益</td>
+                                    <td>账号</td>
+                                    <td>综合得分</td>
+                                    <td>日收益率</td>
+                                    <td>累计净值</td>
+                                    <td>净值得分</td>
+                                    <td>历史最大回撤</td>
+                                    <td>回撤率得分</td>
+                                    <td>累计净利率</td>
+                                    <td>净利润得分</td>
+                                    <td>胜率</td>
+                                    <td>盈亏比</td>
+                                    <td>费率</td>
+                                    <td>风险度</td>
+                                    <td>盈亏</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            <section class="free_rule">
+            <div>
+    <ul class="pagination_container"> <li class="page-item previous">
+      <a class="page-link" href="javascript:void(0);" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+        <span class="sr-only">Previous</span>
+      </a>
+    </li> 
+    <li>           
+  <ul class="pagination"> 
+  </ul>
+  </li>
+   <li class="page-item  next">
+      <a class="page-link" href="javascript:void(0);" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+        <span class="sr-only">Next</span>
+      </a>
+    </li>
+  </ul>
+  <div class="pagination_btn">
+  共计<span id="total_pages"></span>页 跳转到<input type="text" id="skipPage" style="width:15px;"></input><button id="skip">go</button>
+</div>
+                </div>
+            </section>
+        </article>
+        <footer>
+            <div>本次大赛最终解释权归大赛运营方所有
+            </div>
+        </footer>
+    </div>
+    <script type="text/javascript" src="./lib/jquery-1.12.1.js"></script>
+    <script type="text/javascript" src="./index.js"></script>
+    <div class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <a href="javascript:void(0);" class="close"><span aria-hidden="true">&times;</span></a>
+                    <h4 class="modal-title">消息</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="modal_menu">
+                        <ul>
+                            <li>
+                                <label>
+                                    <input name="menu" type="checkbox">累计净值</label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input name="menu" type="checkbox">净利润和手续费</label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input name="menu" type="checkbox">品种盈亏对比</label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input name="menu" type="checkbox">品种成功率</label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input name="menu" type="checkbox">成交分布</label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input name="menu" type="checkbox">原始数据</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="chart">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+    <ul id="test" style="display: none;">
+    	<li>
+    		<div>
+    			 <strong>##</strong>:  @  <br>
+				 净值：@@ 收益率：@@@ 得分：@@@@ 
+    		</div>
+    	</li>
+    </ul>
+<script type="text/javascript" src="rank.js"></script>
+</body>
+
+</html>
