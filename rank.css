@@ -5,7 +5,7 @@
 
 .top_header {
     background: url(img/top2_bg.jpg) no-repeat center center yellow;
-    background-size: contain;
+    background-size: 100% 100%;
     height: 102px;
     width: 1009px;
     margin: 0 auto;
@@ -18,10 +18,20 @@
     line-height: 48px;
 }
 .rate_sec_div_03{
-   vertical-align: middle;
+ vertical-align: middle;
     height: 48px;
     line-height: 48px;
+    text-align: center;
+    float: right;
+    font-size: 14px;
+    display: table;
+    position: relative;
+    width: 800px;
+    overflow: visible;
+
 }
+
+
 .rate_sec_title{
     background: #E9E7E7;
     height: 28px;
@@ -34,6 +44,85 @@
 .query{
   background: #925D0D !important;
 }
+.rate_sec_div_03 label{
+display: table-cell;
+}
+.time{
+	margin-right: 68px;
+}
+.sub{
+  display: inline;
+  vertical-align: middle;
+  text-align: center;
+  line-height: 29px;
+    height: 29px;
+  overflow: hidden;
+  position: relative;
+
+}
+#query_btn{
+  position: relative;
+  border:0;
+margin:0;
+box-sizing: border-box;
+    line-height: 30px;
+    height: 30px;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+    margin-right: 60px;
+    margin-left: -2px;
+    width: 27px;
+        padding: 0px;
+    background-image: url(img/search.png);
+    background-repeat: no-repeat;
+    background-position: 30% 20%;
+        background-color: transparent;
+}
+.alert{
+  display: none;
+  position: absolute;
+  top: 20%;
+  left: 40%;
+  background: white;
+  border: 1px solid black;
+  width: 200px;
+  height: 50px;
+  text-align: center;
+}
+#sort {
+  /*overflow: hidden;*/
+	    height: 40px;
+    padding: 5px 8px;
+    width: 100px;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    background-image: none;
+    box-shadow: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    margin: 0px;
+    outline:none;
+
+
+}
+select::-ms-expand {
+    display: none;
+}
+.select-style {
+    border: 1px solid #ccc;
+    width: 20px;
+    display: inline;
+    border-radius: 3px;
+    overflow: hidden;
+    background: #fafafa url("img/select.gif") no-repeat 100% 50%;
+}
+#query_txt{
+	margin-right: -4px;
+	    width: 149px;
+}
 .free_rule {
     background-color: #fff;
      margin: 0 auto; 
@@ -45,49 +134,54 @@
 }
 
 .pagination_container{
- width: 900px;
-    display: inline-block;
+    display: inline;
     margin: 0px;
     padding: 0px;
+    position: absolute;
+    top: 7%;
+    left: 17%;
+    z-index: 2;
 }
 .pagination{
     width: 600px;
     display: inline;
     margin: 0px;
     padding: 0px;
+
+}
+
+.pagination .page-link{
+  display: inline;
+      padding: 3px;
+    margin: 6px;
 }
 .pagination >li,.pagination_container >li{
 	display: inline;
 }
 .pagination_container  li > a,
 .pagination_container  li > span {
-  position: relative;
-  float: left;
-  padding: 6px 12px;
-  margin-left: -1px;
-  line-height: 1.42857143;
-  color: #337ab7;
-  text-decoration: none;
-  background-color: #fff;
-  border: 1px solid #ddd;
+position: relative;
+    /* float: left; */
+    margin: 0px;
+    line-height: 28px;
+    color: #989898;
+    text-decoration: none;
+    background-color: transparent;
+    display: inline-block;
+    border: 1px solid #ddd;
+    text-align: center;
+    height: 28px;
+    width: 26px;
 }
-.pagination > li:first-child > a,
-.pagination > li:first-child > span {
-  margin-left: 0;
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
-}
-.pagination > li:last-child > a,
-.pagination > li:last-child > span {
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
+.pagination_container  li span{
+  visibility: hidden;
 }
 .pagination > li > a:hover,
 .pagination > li > span:hover,
 .pagination > li > a:focus,
 .pagination > li > span:focus {
   z-index: 2;
-  color: #23527c;
+  color: color: #989898;
   background-color: #eee;
   border-color: #ddd;
 }
@@ -100,8 +194,8 @@
   z-index: 3;
   color: #fff;
   cursor: default;
-  background-color: #337ab7;
-  border-color: #337ab7;
+  background-color: #FFB900;
+  border-color: #FFB900;
 }
 
 .pagination_container > .disabled > span,
@@ -111,20 +205,129 @@
 .pagination_container > .disabled > a:hover,
 .pagination_container > .disabled > a:focus {
   color: #777;
-  /*cursor: not-allowed;*/
   background-color: red;
   border-color: #ddd;
   display: none;
 }
 
+
+#skip{
+ border: 1px solid #919191;
+    display: inline;
+    /* height: 23px; */
+    /* width: 22px; */
+    padding: 4px;
+
+    cursor: pointer;
+    margin-left: 6px;
+}
 .pagination_btn{
-	display: inline;
-	width: 120px;
+    display: inline;
+    width: 120px;
+    color: #989898;
+    /* overflow: hidden; */
+    position: absolute;
+    top: 4%;
+    left: 20%;
+    padding: 0;
+    margin: 0;
+
+}
+
+.page-item{
+  position: relative;
+}
+.page-link{
+position: absolute;
+top: 0;
+left: 0;
+}
+
+.previous, .next{
+      width: 28px;
+    background: url(./img/page_prev_next.gif) right bottom;
+    cursor: pointer;
+    background-color: transparent;
+    width: 23px;
+    height: 23px;
+    overflow: hidden;
+}
+.previous{
+    background-position: 0px 24px;
+    width: 28px;
+    height: 28px;
+}
+.next{
+    background-position:  28px 24px;
+    width: 28px;
+    height: 28px;
 }
 .free_rule>div{
 	width: 100%;
 }
 
-.active{
-background: red;
+.imd-select  ul {
+  list-style: none;
+  padding: 0;
+}
+.imd-select {
+
+position: absolute;
+    /* margin: 5px auto; */
+    /* padding: 2px; */
+    width: 110px;
+    height: 24px;
+    display: table-cell;
+    /* overflow: visible; */
+    top: 25%;
+    left: 80%;
+
+
+}
+.imd-selector {
+
+      display: block;
+    /* padding: 3px; */
+    text-decoration: none;
+    background-color: #E5E8E1;
+   color: #782a0b;
+    position: relative;
+    text-align: center;
+    height: 22px;
+    line-height: 22px;
+}
+.imd-selector:after {
+content: url(img/select.gif);
+    position: absolute;
+    right: 0px;
+}
+.imd-select-list {
+  display: none;
+  padding: 0px;
+  margin: 0px;
+  background: green;
+}
+.imd-select-list li {
+  background-color: #eee;
+  margin: 0px;
+  padding: 2px;
+  text-align:center;
+  height: 35px;
+}
+.imd-select-list li:hover {
+  background-color: #E59F0B;
+  color: #fff;
+  cursor: pointer;
+}
+
+.span2 {
+    position: absolute;
+    top: -2%;
+    right: 2%;
+}
+
+.span1 {
+    position: absolute;
+    top: -2%;
+    right: 22%;
 }

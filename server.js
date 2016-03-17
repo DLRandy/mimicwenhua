@@ -21,8 +21,6 @@ app.post('/getMain_Data',function (req, res,next) {
 	 	default:
 	 		if (req.body.TopNum == 3) {
 	 			filePath="3.json";
-	 		} else if (req.body.page==2) {
-	 			filePath="2.json";
 	 		} else{
 	 		    filePath="1.json";
 	 		}	
@@ -31,6 +29,8 @@ app.post('/getMain_Data',function (req, res,next) {
 
 	 fs.readFile(__dirname+"/"+filePath, 'utf-8', function (error,data) {
 	 	var out = JSON.parse(data);
+	 	out.pagesize=req.body.TopNum;
+	 	out.page= req.body.page;
 	 	res.writeHead(200, {"Content-Type":"application/json"});
         res.end(JSON.stringify(out) + '\n'); 
 	 });

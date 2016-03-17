@@ -7,6 +7,8 @@
     <link rel="stylesheet" type="text/css" href="./normalize.css">
     <link rel="stylesheet" type="text/css" href="./index.css">
     <script type="text/javascript" src="./html5shiv.js"></script>
+    <script type="text/javascript" src="js/polyfillcss3.js"></script>
+    <!--[if IE 8]><script src="js/ie8.js"></script><![endif]-->
 </head>
 
 <body>
@@ -15,7 +17,7 @@
         <header class="top_header"></header>
         <nav>
             <ul class="nav">
-                <li><a href="#">大赛首页</a>
+                <li><a href="index.html">大赛首页</a>
                     <hr class="vertical">
                 </li>
                 <li><a href="#">大赛介绍</a>
@@ -50,10 +52,10 @@
 
                         </ul>
                     </div>
-                    <a href="#" style="float: right;margin-right:40px;font-size:14px;">点击查看获奖名单</a>
+                    <a href="#" style="float: right;margin-right:40px;font-size:14px;margin-top: -3px;">点击查看获奖名单</a>
                 </div>
                 <div class="more_sec column">
-                    <div><span><img  src="img/news_title.png"></span> <span style="float:right"> >>更多 </span></div>
+                    <div><span><img  src="img/news_title.png"></span> <span style="float:right;cursor: pointer;font-size: 17px;"> >>更多 </span></div>
                     <ul id="news">
                     </ul>
                 </div>
@@ -125,7 +127,8 @@
         </footer>
     </div>
     <script type="text/javascript" src="./lib/jquery-1.12.1.js"></script>
-    <script type="text/javascript" src="./index.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+      <script type="text/javascript" src="js/common.js"></script>
     <div class="modal fade" tabindex="-1" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -174,7 +177,7 @@
     	<li>
     		<div>
     			 <strong>##</strong>:  @  <br>
-				 净值：@@ 收益率：@@@ 得分：@@@@ 
+				 <span style="font-weight: normal;">净值：</span>@@ <span style="font-weight: normal;">收益率：</span>@@@ <span style="font-weight: normal;">得分：</span>@@@@ 
     		</div>
     	</li>
     </ul>
