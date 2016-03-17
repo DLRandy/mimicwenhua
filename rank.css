@@ -58,6 +58,7 @@ display: table-cell;
     height: 29px;
   overflow: hidden;
   position: relative;
+      display: -webkit-inline-box;
 
 }
 #query_btn{
